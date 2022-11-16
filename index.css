@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.9;
+  background-color: #f6cbd9;
+  color: #5a4d69;
+  font-size: 18px;
+}
+
+/* Navigation bar */
+
+.navdiv {
+  height: 60px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.509);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 30px;
+  font-size: 25px;
+  font-family: "Lato", sans-serif;
+}
+
+nav ul li a {
+  color: #5a4d69;
+  text-decoration: none;
+}
+
+/* Title & Simple Slogan */
+header h1 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 80px;
+  text-align: center;
+}
+
+header p {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Search bar & Subcription */
+h3 {
+  text-align: center;
+}
+
+.input-box {
+  margin: auto;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+input[type="email"],
+input[type="text"] {
+  background: transparent;
+  width: 75%;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid rgba(245, 245, 245, 0.692);
+  border-radius: 20px;
+  color: #5a4d69;
+}
+
+input[type="submit"] {
+  height: 35px;
+  font-size: 14px;
+  box-shadow: 3px 3px 10px 1px rgba(19, 19, 19, 0.589);
+  border: none;
+  border-radius: 20px;
+  background-color: #5a4d69;
+  padding: 10px;
+  color: white;
+  align-self: center;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.footertb {
+  margin: auto;
+  width: 80%;
+}
+
+.footertb td {
+  margin: auto;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
