@@ -1,21 +1,21 @@
 # Sitemap
 
-## 1.Landing Page(index.html)
-  (1)Add an attractive image to the header
-  (2)Search bar function: Search the cat you'd like to know (get input from user and return a result in Breeds page)
-  (3)Cat photo gallery(linked to Breeds as well): display 6-8 common cats and each one has its own link
-  (4)Simple introduction to Habits Page(image + paragraph)
-  (5)Simple introduction to Care For Cats Page(image + paragraph)
-  (6)Simple introduction to Cat Test Page: with button linked to Cat Test Page
-  (7)Subscribe to our newsletter: we can create an email account for that
-## 2.Breeds
+## Landing Page(index.html)
+  1. Add an attractive image to the header
+  2. Search bar function: Search the cat you'd like to know (get input from user and return a result in Breeds page)
+  3. Cat photo gallery(linked to Breeds as well): display 6-8 common cats and each one has its own link
+  4. Simple introduction to Habits Page(image + paragraph)
+  5. Simple introduction to Care For Cats Page(image + paragraph)
+  6. Simple introduction to Cat Test Page: with button linked to Cat Test Page
+  7. Subscribe to our newsletter: we can create an email account for that
+## Breeds
   (1)Search Bar
   (2)Display Default Cats(name,images): when user clicks the picture or the name, jump to a detail page that shows the name,the original country,habits,personality and so on.(Something like[ this]( https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=gpN-ReBkp " this"))
-## 3.Habits
+## Habits
 Maybe we could combine this with breeds, Habits Page could show the details of each cat
-## 4.Care For Cats
+## Care For Cats
   Content: How to take care of cats
-## 5.Cat Test
+## Cat Test
 
 
 ## Attention:
