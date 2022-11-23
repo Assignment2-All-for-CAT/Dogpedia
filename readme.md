@@ -1,3 +1,8 @@
+# update 11.23:
+  Naming convention:
+    id: #camelCase
+    class:.a-b
+
 # Sitemap
 
 ## Landing Page(index.html)
@@ -24,4 +29,5 @@ Maybe we could combine this with breeds, Habits Page could show the details of e
 3. Make sure any form data is validated and formatted for return to the back-end. To demonstrate you will send the data to another page rendering and simulate responding.  - **Subscribe Newsletter Part**
 4. Dynamic interactive content that modifies the user experience in some way, e.g. dark mode.
 5. Include the use of asynchronous data from a publicly accessible API. - **Breeds Page**
-6. You are free to use any simple libraries (like jQuery) that can be implemented through online linking or simple file inclusion. - **I think jQuery saves a lot of time by not having to type "document.queryselector" everytime so maybe we could use that.**
+
+
