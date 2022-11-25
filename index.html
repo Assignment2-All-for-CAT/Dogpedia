@@ -25,11 +25,11 @@
             <i id="logo" class="fa-solid fa-paw fa-2xl"></i>
             <h2 id="title">Catpedia</h2>
           </div>
-          <ul class="col-4">
-            <li><a href="">Breeds</a></li>
-            <li><a href="">Care For Cats</a></li>
-            <li><a href="">Your favorite cat</a></li>
-          </ul>
+          <div class="col-4 links">
+            <a href="">Breeds</a>
+            <a href="">Care For Cats</a>
+            <a href="">Your favorite cat</a>
+          </div>
         </nav>
       </div>
       <!-- Slideshow container -->
@@ -120,12 +120,41 @@
       </div>
     </section>
     <!-- Your favorite cat -->
+    <section class="pick">
+      <h2 class="part-title pick-title">Pick Your Favorite Cat NOW!</h2>
+      <div class="pics-container">
+        <div class="row">
+          <div class="column">
+            <img src="./Images/cat-pic1.jpg" alt="cat-1" class="pick-img" />
+            <img src="./Images/cat-pic2.jpg" alt="cat-2" class="pick-img" />
+            <img src="./Images/cat-pic3.jpg" alt="cat-3" class="pick-img" />
+          </div>
+          <div class="column">
+            <img src="./Images/cat-pic4.jpg" alt="cat-4" class="pick-img" />
+            <img src="./Images/cat-pic5.jpg" alt="cat-5" class="pick-img" />
+            <img src="./Images/cat-pic6.jpg" alt="cat-6" class="pick-img" />
+          </div>
+          <div class="column">
+            <img src="./Images/cat-pic7.jpg" alt="cat-7" class="pick-img" />
+            <img src="./Images/cat-pic8.jpg" alt="cat-8" class="pick-img" />
+            <img src="./Images/cat-pic9.jpg" alt="cat-9" class="pick-img" />
+          </div>
+        </div>
+        <input type="button" value="Vote For Me" />
+      </div>
+    </section>
+    <!-- pop up contact box -->
     <section>
-      <h2 class="part-title">Pick your favorite cat NOW!</h2>
+      <div class="overlay hidden"></div>
+      <div class="contact-box modal hidden">
+        <button class="close-modal">&times</button>
+        <h2>I am a pop up window</h2>
+        <p>Here is some information about how to contact us.</p>
+      </div>
     </section>
     <!-- Subscription -->
-    <section>
-      <h2 class="part-title">Subscribe to our newsletter</h2>
+    <section class="subscription">
+      <h2 class="s-title">Subscribe to our newsletter</h2>
       <form>
         <div class="input-box">
           <i class="fa-regular fa-envelope"></i>
@@ -138,6 +167,7 @@
           <input type="submit" value="Subscribe" />
         </div>
       </form>
+      <p>*Subscribe to our newsletter to receive cat related info.</p>
     </section>
 
     <!-- Footer -->
@@ -148,7 +178,7 @@
           <td><a href="">Habits</a></td>
           <td><a href="">Care For Cats</a></td>
           <td><a href="">Your Favorite Cat</a></td>
-          <td><a href="">Contact us</a></td>
+          <td><button id="showModal">Contact us</button></td>
         </tr>
       </table>
     </footer>

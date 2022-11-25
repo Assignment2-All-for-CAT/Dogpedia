@@ -25,3 +25,25 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 10000); // Change image every 2 seconds
 }
+
+//pop up box
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnShowModal = document.querySelector("#showModal");
+const btnCloseModal = document.querySelector(".close-modal");
+
+const showModal = function () {
+  console.log("22");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+btnShowModal.addEventListener("click", showModal);
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
