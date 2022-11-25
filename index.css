@@ -14,7 +14,7 @@ font-family: 'Secular One', sans-serif; */
   width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 783px) {
   /* For desktop: */
   .col-1 {
     width: 20%;
@@ -101,6 +101,49 @@ body {
   color: #5a4d69b1;
 }
 
+#mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 783px) {
+  .links a {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    overflow: auto;
+    z-index: 100;
+    background-color: #f6cbd9;
+    transition: 0.5s;
+  }
+
+  .sidebar a {
+    display: block;
+    color: #5a4d69;
+    padding: 16px;
+    text-decoration: none;
+    text-align: right;
+    font-size: 16px;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+    transition: 0.4s;
+  }
+
+  .sidebar a:hover {
+    color: white;
+  }
+}
+
 /* slides */
 
 .slides {
@@ -145,18 +188,39 @@ body {
   color: white;
 }
 
+@media screen and (max-width: 783px) {
+  .slogan h1 {
+    font-size: 50px;
+  }
+
+  .slogan p {
+    font-size: 15px;
+    margin-bottom: 100px;
+  }
+}
+
 /* Search bar & Subcription */
+@media screen and (max-width: 783px) {
+  form .input-box {
+    width: 70%;
+  }
+
+  .input-box input[type="email"],
+  .input-box input[type="text"] {
+    font-size: 12px;
+  }
+
+  input[type="submit"] {
+    width: 20%;
+    font-size: 12px;
+  }
+}
 
 .search-top {
   top: 70%;
   left: 10%;
   position: absolute;
   z-index: 99;
-}
-
-.part-title {
-  font-family: "Secular One", sans-serif;
-  font-size: 40px;
 }
 
 .input-box {
@@ -213,16 +277,46 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 /* take care of cats */
+@media screen and (max-width: 783px) {
+  .care-content .part-title {
+    font-size: 25px;
+  }
+
+  .care-content h4 {
+    font-size: 12px;
+  }
+
+  section .care {
+    flex-direction: column;
+    padding: 2%;
+  }
+
+  .care #careImg {
+    display: none;
+  }
+
+  .care .care-content {
+    width: 100%;
+    padding: 2%;
+  }
+}
+
+.part-title {
+  font-family: "Secular One", sans-serif;
+  font-size: 40px;
+}
 
 .care {
-  margin: 5%;
+  padding: 5%;
   display: flex;
   flex-direction: row;
 }
 
 #careImg {
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 10px 10px 30px 1px #5a4d6957;
+  width: 40%;
 }
 
 .care-container {
@@ -230,6 +324,7 @@ input[type="submit"]:hover {
 }
 
 .care-content {
+  width: 60%;
   padding: 0 5% 0 10%;
   display: flex;
   flex-direction: column;
@@ -256,8 +351,14 @@ input[type="submit"]:hover {
 }
 
 /* pick your cat */
+@media screen and (max-width: 783px) {
+  .pick .pick-title {
+    font-size: 25px;
+  }
+}
+
 .pick {
-  margin: 5%;
+  padding: 5%;
 }
 
 .pics-container {
@@ -270,6 +371,8 @@ input[type="submit"]:hover {
 .pick-title {
   padding: 10px;
   text-align: start;
+  font-family: "Secular One", sans-serif;
+  font-size: 40px;
 }
 
 .row {
@@ -355,13 +458,17 @@ input[type="button"]:hover {
 /* contact box */
 
 .contact-box {
+  width: 600px;
   position: fixed;
   bottom: 50%;
   left: 50%;
-  background-color: #5a4d69;
+  /* to center the box */
+  margin-left: -270px;
+  margin-bottom: -232.5px;
+  background-color: #5a4d69e7;
   color: #f6cbd9;
   text-align: center;
-  padding: 60px;
+  padding: 30px;
   border-radius: 5px;
   box-shadow: 2px 2px 15px 0 #5a4d69a8;
   z-index: 2;
@@ -402,6 +509,42 @@ input[type="button"]:hover {
   font-family: "Maven Pro", sans-serif;
   font-weight: 600;
 }
+
+.contact-form {
+  width: 100%;
+  padding: 12px;
+  resize: vertical;
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 3fr 0.5fr;
+}
+.contact-box h2 {
+  font-family: "Secular One", sans-serif;
+  padding: 20px 0;
+}
+
+.contact-box input[type="text"],
+.contact-box input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  color: #5a4d69;
+}
+
+#message {
+  padding: 10px;
+  font-family: "Secular One", sans-serif;
+}
+
+#send {
+  background-color: #f6cbd9;
+}
+
+#send:hover {
+  background-color: #5a4d69;
+  color: #f6cbd9;
+}
+
 /* subscription */
 
 .subscription {

@@ -8,6 +8,15 @@ $(window).scroll(function () {
   }
 });
 
+// mobile nav bar
+$("#mobile-nav").click(function () {
+  if ($("#sidebar").hasClass("hidden")) {
+    $(".sidebar").removeClass("hidden");
+  } else {
+    $(".sidebar").addClass("hidden");
+  }
+});
+
 // automatic slides
 let slideIndex = 0;
 showSlides();

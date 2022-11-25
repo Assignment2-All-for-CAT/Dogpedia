@@ -25,12 +25,20 @@
             <i id="logo" class="fa-solid fa-paw fa-2xl"></i>
             <h2 id="title">Catpedia</h2>
           </div>
-          <div class="col-4 links">
+          <div class="col-4 links" id="navLinks">
             <a href="">Breeds</a>
             <a href="">Care For Cats</a>
             <a href="">Your favorite cat</a>
+            <a href="javascript:void(0);" id="mobile-nav"
+              ><i class="fa-solid fa-bars fa-2xl"></i
+            ></a>
           </div>
         </nav>
+      </div>
+      <div class="sidebar hidden" id="sidebar">
+        <a href="">Breeds</a>
+        <a href="">Care For Cats</a>
+        <a href="">Your favorite cat</a>
       </div>
       <!-- Slideshow container -->
       <div class="slides-container col-5">
@@ -72,56 +80,59 @@
       </form>
     </section>
     <!-- Care for Cats -->
-    <section class="care">
-      <img
-        src="./Images/take-care-of-cats.jpg"
-        alt="take care of cats"
-        id="careImg"
-        class="col-2"
-      />
-      <div class="care-content col-3">
-        <h2 class="part-title">Care For Cats</h2>
-        <p>Don't know how to take care of your adorable cat?</p>
-        <p>Here are some tips for you:</p>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-shield-cat fa-2xl"></i>
-            <h4>Cat Owner’s Responsibilities</h4>
+    <section>
+      <div class="care">
+        <img
+          src="./Images/take-care-of-cats.jpg"
+          alt="take care of cats"
+          id="careImg"
+        />
+        <div class="care-content">
+          <h2 class="part-title">Care For Cats</h2>
+          <p>Don't know how to take care of your adorable cat?</p>
+          <p>Here are some tips for you:</p>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-shield-cat fa-2xl"></i>
+              <h4>Cat Owner’s Responsibilities</h4>
+            </div>
+            <p>
+              Cats are a delightful addition to a home and family. They are now
+              the #1 pet in North America. Click and follow these tips and you
+              and your pet will enjoy a lifetime of love and companionship
+              together.
+            </p>
           </div>
-          <p>
-            Cats are a delightful addition to a home and family. They are now
-            the #1 pet in North America. Click and follow these tips and you and
-            your pet will enjoy a lifetime of love and companionship together.
-          </p>
-        </div>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-cat fa-2xl"></i>
-            <h4>Tips For A Happy & Healthy Indoor Kitty</h4>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-cat fa-2xl"></i>
+              <h4>Tips For A Happy & Healthy Indoor Kitty</h4>
+            </div>
+            <p>
+              Cats crave familiarity, structure and routine, which is exactly
+              what an indoor life has to offer, with the added bonus of safety
+              from all the dangers from outside! By ensuring your cat has the
+              necessary home environment, your cat can live a long and happy
+              life indoors.
+            </p>
           </div>
-          <p>
-            Cats crave familiarity, structure and routine, which is exactly what
-            an indoor life has to offer, with the added bonus of safety from all
-            the dangers from outside! By ensuring your cat has the necessary
-            home environment, your cat can live a long and happy life indoors.
-          </p>
-        </div>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-tag fa-2xl"></i>
-            <h4>Harness Training For Cats</h4>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-tag fa-2xl"></i>
+              <h4>Harness Training For Cats</h4>
+            </div>
+            <p>
+              Be very patient and persistent and reward your pet lovingly.
+              Yelling, hitting or rough treatment will only teach your cat to
+              fear you and will accomplish nothing.
+            </p>
           </div>
-          <p>
-            Be very patient and persistent and reward your pet lovingly.
-            Yelling, hitting or rough treatment will only teach your cat to fear
-            you and will accomplish nothing.
-          </p>
         </div>
       </div>
     </section>
     <!-- Your favorite cat -->
     <section class="pick">
-      <h2 class="part-title pick-title">Pick Your Favorite Cat NOW!</h2>
+      <h2 class="pick-title">Pick Your Favorite Cat NOW!</h2>
       <div class="pics-container">
         <div class="row">
           <div class="column">
@@ -148,8 +159,24 @@
       <div class="overlay hidden"></div>
       <div class="contact-box modal hidden">
         <button class="close-modal">&times</button>
-        <h2>I am a pop up window</h2>
-        <p>Here is some information about how to contact us.</p>
+        <h2>Have other questions? Let us know!</h2>
+        <form>
+          <div class="contact-form">
+            <label for="userName" class="box-1">Name</label>
+            <input type="text" id="userName" class="box-4" />
+
+            <label for="userEmail" class="box-1">Email</label>
+            <input type="email" id="userEmail" class="box-4" />
+
+            <label for="question" class="box-1">Question</label>
+            <textarea
+              placeholder="Please leave your message here."
+              id="message"
+              class="box-4"
+            ></textarea>
+          </div>
+          <input type="submit" value="Subscribe" id="send" />
+        </form>
       </div>
     </section>
     <!-- Subscription -->
