@@ -1,49 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro:wght@400;600;800&family=Secular+One&display=swap");
+/* font-family: 'Lato', sans-serif;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Secular One', sans-serif; */
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 20%;
+  }
+  .col-2 {
+    width: 40%;
+  }
+  .col-3 {
+    width: 60%;
+  }
+  .col-4 {
+    width: 80%;
+  }
+  .col-5 {
+    width: 100%;
+  }
 }
 
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.9;
-  background-color: #f6cbd9;
+  background-color: white;
   color: #5a4d69;
   font-size: 18px;
 }
 
 /* Navigation bar */
 
-.nav-div {
-  height: 60px;
-}
-
 .nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 100;
-  width: 100%;
-  height: 60px;
+  overflow: hidden;
+  height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.509);
+  background-color: #f6cbd9d8;
+  box-shadow: 0 1px 20px 1px #5a4d6959;
+}
+
+.sticky {
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+
+.title-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logo {
+  color: #5a4d69;
+  margin: 0 20px;
+}
+
+#title {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  margin-right: 40px;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   list-style-type: none;
 }
 
 nav ul li {
   display: inline;
   margin-right: 30px;
-  font-size: 25px;
-  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
 }
 
 nav ul li a {
@@ -51,59 +99,153 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Title & Simple Slogan */
-header h1 {
-  font-family: "Maven Pro", sans-serif;
-  font-size: 80px;
-  text-align: center;
+/* slides */
+
+.slides {
+  height: 95vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
-header p {
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header Title & Simple Slogan */
+.slogan {
+  top: 35%;
+  left: 10%;
+  position: absolute;
+  z-index: 99;
+}
+
+.slogan h1 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: white;
+}
+
+.slogan p {
   font-family: "Lato", sans-serif;
   font-size: 20px;
-  text-align: center;
+  margin-bottom: 100px;
+  color: white;
 }
 
 /* Search bar & Subcription */
-h3 {
-  text-align: center;
+
+.search-top {
+  top: 70%;
+  left: 10%;
+  position: absolute;
+  z-index: 99;
+}
+
+.part-title {
+  font-family: "Secular One", sans-serif;
+  font-size: 40px;
 }
 
 .input-box {
   margin: auto;
-  width: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  padding: 10px;
-  box-shadow: 0 0 40px 1px rgba(0, 0, 0, 0.2);
+  width: 45%;
+  background-color: white;
+  border-radius: 50rem;
+  border: solid #f6cbd9;
+  padding: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+}
+
+.input-box i {
+  margin: 0 15px;
+  background-color: transparent;
+  border: none;
+  color: #f6cbd9;
+  transform: translateY(10px);
 }
 
 input[type="email"],
 input[type="text"] {
-  background: transparent;
-  width: 75%;
-  margin: 5px 0;
-  padding: 8px;
-  border: 1px solid #5a4d69;
-  border-radius: 20px;
+  width: 80%;
+  background-color: white;
+  border: none;
+  outline: none;
   color: #5a4d69;
+  font-size: 18px;
+  font-family: "Secular One", sans-serif;
+}
+
+::placeholder {
+  color: #5a4d69;
+  opacity: 0.5;
 }
 
 input[type="submit"] {
-  height: 35px;
+  width: 100px;
   font-size: 14px;
-  box-shadow: 0 0 10px 3px rgb(0 0 0 / 20%);
   border: none;
-  border-radius: 20px;
+  border-radius: 50rem;
   background-color: #5a4d69;
   padding: 10px;
   color: white;
   align-self: center;
+  font-family: "Secular One", sans-serif;
 }
 
+/* take care of cats */
+
+.care {
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+#careImg {
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px 1px #5a4d6957;
+}
+
+.care-container {
+  margin: 2% 0;
+}
+
+.care-content {
+  padding: 0 5% 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.care-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.care-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.care-content p {
+  color: black;
+  line-height: 30px;
+  text-align: justify;
+}
 /* Footer */
 
 footer {
@@ -118,7 +260,13 @@ footer {
 
 .footer-tb td {
   margin: auto;
-  font-family: "Maven Pro", sans-serif;
-  font-size: 16px;
   text-align: center;
+}
+
+.footer-tb td a {
+  text-decoration: none;
+  color: #5a4d69;
+  font-size: 16px;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 600;
 }
