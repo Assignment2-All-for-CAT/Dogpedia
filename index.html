@@ -62,7 +62,7 @@
     </header>
     <!-- Search Bar: users can search the breed of cats-->
     <section>
-      <div class="slogan col-5">
+      <div class="slogan">
         <h1>Catpedia</h1>
         <p>Everything You Need to Know About Cats</p>
       </div>
@@ -131,25 +131,23 @@
       </div>
     </section>
     <!-- Your favorite cat -->
-    <section class="pick">
-      <h2 class="pick-title">Pick Your Favorite Cat NOW!</h2>
-      <div class="pics-container">
-        <div class="row">
-          <div class="column">
-            <img src="./Images/cat-pic1.jpg" alt="cat-1" class="pick-img" />
-            <img src="./Images/cat-pic2.jpg" alt="cat-2" class="pick-img" />
-            <img src="./Images/cat-pic3.jpg" alt="cat-3" class="pick-img" />
-          </div>
-          <div class="column">
-            <img src="./Images/cat-pic4.jpg" alt="cat-4" class="pick-img" />
-            <img src="./Images/cat-pic5.jpg" alt="cat-5" class="pick-img" />
-            <img src="./Images/cat-pic6.jpg" alt="cat-6" class="pick-img" />
-          </div>
-          <div class="column">
-            <img src="./Images/cat-pic7.jpg" alt="cat-7" class="pick-img" />
-            <img src="./Images/cat-pic8.jpg" alt="cat-8" class="pick-img" />
-            <img src="./Images/cat-pic9.jpg" alt="cat-9" class="pick-img" />
-          </div>
+    <section>
+      <div class="pick">
+        <h2 class="pick-title">Pick Your Favorite Cat NOW!</h2>
+        <div class="pics-container">
+          <img src="./Images/cat-pic1.jpg" alt="cat-1" class="pick-img" />
+          <img src="./Images/cat-pic2.jpg" alt="cat-2" class="pick-img" />
+          <img src="./Images/cat-pic3.jpg" alt="cat-3" class="pick-img" />
+          <img src="./Images/cat-pic4.jpg" alt="cat-4" class="pick-img" />
+          <img src="./Images/cat-pic5.jpg" alt="cat-5" class="pick-img" />
+          <img src="./Images/cat-pic6.jpg" alt="cat-6" class="pick-img" />
+          <img src="./Images/cat-pic7.jpg" alt="cat-7" class="pick-img" />
+          <img src="./Images/cat-pic8.jpg" alt="cat-8" class="pick-img" />
+          <img
+            src="./Images/cat-pic9.jpg"
+            alt="cat-9"
+            class="pick-img mobile-9"
+          />
         </div>
         <input type="button" value="Vote For Me" />
       </div>
@@ -180,34 +178,33 @@
       </div>
     </section>
     <!-- Subscription -->
-    <section class="subscription">
-      <h2 class="s-title">Subscribe to our newsletter</h2>
-      <form>
-        <div class="input-box">
-          <i class="fa-regular fa-envelope"></i>
-          <input
-            type="email"
-            id="userEmail"
-            name="userEmail"
-            placeholder="Your email"
-          />
-          <input type="submit" value="Subscribe" />
-        </div>
-      </form>
-      <p>*Subscribe to our newsletter to receive cat related info.</p>
+    <section>
+      <div class="subscription">
+        <h2 class="s-title">Subscribe to our newsletter</h2>
+        <form>
+          <div class="input-box" id="mobile-sub">
+            <i class="fa-regular fa-envelope"></i>
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              placeholder="Your email"
+            />
+            <input type="submit" value="Subscribe" />
+          </div>
+        </form>
+        <p>*Subscribe to our newsletter to receive cat related info.</p>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <table class="footer-tb">
-        <tr>
-          <td><a href="">Breeds</a></td>
-          <td><a href="">Habits</a></td>
-          <td><a href="">Care For Cats</a></td>
-          <td><a href="">Your Favorite Cat</a></td>
-          <td><button id="showModal">Contact us</button></td>
-        </tr>
-      </table>
+      <div class="footer-box">
+        <a class="mobile-footer" href="">Breeds</a>
+        <a class="mobile-footer" href="">Care For Cats</a>
+        <a class="mobile-footer" href="">Your Favorite Cat</a>
+        <button id="showModal" class="mobile-footer">Contact us</button>
+      </div>
     </footer>
   </body>
 </html>
