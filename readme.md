@@ -1,7 +1,34 @@
-# update 11.23:
-  Naming convention:
-    id: #camelCase
-    class:.a-b
+# update 12.01:
+Add anchor to logo and name in the navbar so that it links to home page.
+```html
+          <div class="title-logo col-1">
+            <a href="index.html">
+              <i id="logo" class="fa-solid fa-paw fa-2xl"></i
+            ></a>
+            <a href="index.html"> <h2 id="title">Catpedia</h2></a>
+          </div>
+```
+
+```css
+.title-logo a {
+  text-decoration: none;
+  color: #5a4d69;
+}
+
+.links a:hover {
+  color: #5a4d69b1;
+}
+
+#mobile-nav {
+  display: none;
+  color: #5a4d69;
+}
+```
+
+
+
+
+ 
 
 # Sitemap
 
