@@ -101,12 +101,18 @@ header {
   transition: 0.4s;
 }
 
+.title-logo a {
+  text-decoration: none;
+  color: #5a4d69;
+}
+
 .links a:hover {
   color: #5a4d69b1;
 }
 
 #mobile-nav {
   display: none;
+  color: #5a4d69;
 }
 
 @media screen and (max-width: 783px) {
@@ -565,6 +571,11 @@ input[type="button"]:hover {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr 3fr 0.5fr;
 }
+
+.contact-form input:invalid:required {
+  background-image: linear-gradient(300deg, #5a4d69, #f6cbd9);
+}
+
 .contact-box h2 {
   font-family: "Secular One", sans-serif;
   padding: 20px 0;
