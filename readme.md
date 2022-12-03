@@ -1,3 +1,37 @@
+# upadate 12.02:
+add feedback for contact, please add name attribute to the input(e.g.name="userName") so that we can get the form data.
+
+```html
+<div class="contact-form">
+            <label for="userName" class="box-1">Name</label>
+            <input
+              type="text"
+              id="userName"
+              class="box-4"
+              name="userName"
+              required
+            />
+
+            <label for="userEmail" class="box-1">Email</label>
+            <input
+              type="email"
+              id="userEmail"
+              class="box-4"
+              name="userEmail"
+              required
+            />
+            <label for="question" class="box-1">Question</label>
+            <textarea
+              placeholder="Please leave your message here."
+              id="message"
+              class="box-4"
+              name="message"
+            ></textarea>
+          </div>
+```
+
+
+
 # update 12.01:
 Add anchor to logo and name in the navbar so that it links to home page.
 ```html
