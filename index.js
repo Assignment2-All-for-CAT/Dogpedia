@@ -93,14 +93,13 @@ function contactEmailValidate(e) {
     valid = false;
   }
   if (valid) {
-    // $("#contactForm").submit();
-    closeModal();
     // get data from register form
     const cForm = document.querySelector("#contactForm");
     const cFormData = new FormData(cForm);
     const cObject = Object.fromEntries(cFormData);
     const cJson = JSON.stringify(cObject);
     sessionStorage.setItem("cForm", cJson);
+    console.log(cJson);
     // jump tp thank.html
     window.location.href = "./thank.html";
   }

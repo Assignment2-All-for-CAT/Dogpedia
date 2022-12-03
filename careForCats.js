@@ -38,27 +38,10 @@ btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 // email validation
-const newsSubmitBtn = $("#newsSubmit");
+
 const contactSubmitBtn = $("#send");
 let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
-newsSubmitBtn.click(newsEmailValidate);
 contactSubmitBtn.click(contactEmailValidate);
-
-function newsEmailValidate(e) {
-  e.preventDefault();
-
-  let valid = true;
-  // const newsEmail = $("#newsEmail");
-  const newsEmail = document.querySelector("#newsEmail").value;
-  if (!regex.test(newsEmail)) {
-    $("#newsEmailError").text("Please enter a valid email :)");
-    valid = false;
-  }
-
-  if (valid) {
-    $("#newsForm").submit();
-  }
-}
 
 function contactEmailValidate(e) {
   e.preventDefault();
@@ -71,8 +54,14 @@ function contactEmailValidate(e) {
     valid = false;
   }
   if (valid) {
-    console.log("22");
-    $("#contactForm").submit();
-    closeModal();
+    // get data from contact form
+    const cForm = document.querySelector("#contactForm");
+    const cFormData = new FormData(cForm);
+    const cObject = Object.fromEntries(cFormData);
+    const cJson = JSON.stringify(cObject);
+    console.log(cJson);
+    sessionStorage.setItem("cForm", cJson);
+    // jump tp thank.html
+    window.location.href = "./thank.html";
   }
 }

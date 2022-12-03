@@ -16,7 +16,7 @@ try {
   message.textContent = "Thanks for your subscription! Glad to have you :)";
 } catch (e) {}
 
-// contact feekback
+// contact feekback from home page
 try {
   const cForm = JSON.parse(sessionStorage.getItem("cForm"));
   user.textContent = cForm["userName"];
