@@ -74,7 +74,11 @@ function newsEmailValidate(e) {
   }
 
   if (valid) {
-    $("#newsForm").submit();
+    // $("#newsForm").submit();
+    const newsletter = document.querySelector("#newsEmail").value;
+    sessionStorage.setItem("newsletter", newsletter);
+    // jump tp thank.html
+    window.location.href = "./thank.html";
   }
 }
 
@@ -89,8 +93,15 @@ function contactEmailValidate(e) {
     valid = false;
   }
   if (valid) {
-    console.log("22");
-    $("#contactForm").submit();
+    // $("#contactForm").submit();
     closeModal();
+    // get data from register form
+    const cForm = document.querySelector("#contactForm");
+    const cFormData = new FormData(cForm);
+    const cObject = Object.fromEntries(cFormData);
+    const cJson = JSON.stringify(cObject);
+    sessionStorage.setItem("cForm", cJson);
+    // jump tp thank.html
+    window.location.href = "./thank.html";
   }
 }

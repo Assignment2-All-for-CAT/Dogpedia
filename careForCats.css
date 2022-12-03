@@ -96,6 +96,7 @@ header {
   font-family: "Maven Pro", sans-serif;
   font-weight: 600;
   transition: 0.4s;
+  color: #5a4d69;
 }
 
 .title-logo a {
@@ -224,6 +225,7 @@ h2 {
   font-weight: 400;
   margin: 10px 0;
   text-align: center;
+  padding-top: 5%;
 }
 
 .careContent {

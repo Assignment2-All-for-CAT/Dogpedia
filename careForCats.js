@@ -76,12 +76,3 @@ function contactEmailValidate(e) {
     closeModal();
   }
 }
-
-//change cat img when screen width<800px
-
-// const screenWidth = document.body.clientWidth;
-// for (let i = 1; i < 4; i++) {
-//   if (screenWidth < 800) {
-//     document.querySelector(`#img${i}`).src = `./Images/catmobile${i}.jpg`;
-//   }
-// }
