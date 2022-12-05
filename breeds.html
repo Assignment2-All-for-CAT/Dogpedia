@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="breeds.css">
+     <!-- media framework -->
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+     <!-- icons -->
+     <script
+       src="https://kit.fontawesome.com/4ed69a31c6.js"
+       crossorigin="anonymous"
+     ></script>
+     <script src="./jquery-3.6.1.min.js"></script>
+     <script src="breeds.js" defer></script>
+    <title>Breeds - Catpedia</title>
+</head>
+<body>
+    <!-- Header & Navigation Bar -->
+    <header>
+      <div class="nav--container">
+        <nav class="nav-bar col-5">
+          <div class="title-logo col-1">
+            <a href="index.html">
+              <i id="logo" class="fa-solid fa-paw fa-2xl"></i
+            ></a>
+            <a href="index.html"> <h2 id="title">Catpedia</h2></a>
+          </div>
+          <div class="col-4 links" id="navLinks">
+            <a href="">Breeds</a>
+            <a href="careForCats.html">Care For Cats</a>
+            <a href="">Your favorite cat</a>
+            <a href="javascript:void(0);" id="mobile-nav"
+              ><i class="fa-solid fa-bars fa-2xl"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar hidden" id="sidebar">
+        <a href="">Breeds</a>
+        <a href="./careForCats.html">Care For Cats</a>
+        <a href="">Your favorite cat</a>
+      </div>
+
+    <!-- HTML Breeds Page -->
+    <!-- <input type="text" id="search"> --> 
+    <!-- Search Bar: users can search the breed of cats-->
+    <section>
+      <form>
+        <div class="input-box search-top">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            name="catname"
+            id="search"
+            placeholder="Search the cat you'd like to know"
+          />
+          <input type="text" value="Search" />
+        </div>
+      </form>
+    </section>
+  
+    <div id="gallery"></div>
+
+        <!-- pop up contact box -->
+        <section>
+          <div class="overlay hidden"></div>
+          <div class="contact-box modal hidden">
+            <button class="close-modal">&times</button>
+            <h2>Have other questions? Let us know!</h2>
+            <form id="contactForm" action="#" method="get">
+              <div class="contact-form">
+                <label for="userName" class="box-1">Name</label>
+                <input
+                  type="text"
+                  id="userName"
+                  class="box-4"
+                  name="userName"
+                  required
+                />
+    
+                <label for="userEmail" class="box-1">Email</label>
+                <input
+                  type="email"
+                  id="userEmail"
+                  class="box-4"
+                  name="userEmail"
+                  required
+                />
+                <label for="question" class="box-1">Question</label>
+                <textarea
+                  placeholder="Please leave your message here."
+                  id="message"
+                  class="box-4"
+                  name="message"
+                ></textarea>
+              </div>
+              <p id="userEmailError"></p>
+              <br />
+              <input type="submit" value="Send" id="send" />
+            </form>
+          </div>
+        </section>
+        <!-- Subscription -->
+        <section>
+          <div class="subscription">
+            <h2 class="s-title">Subscribe to our newsletter</h2>
+            <form id="newsForm" action="#" method="get">
+              <div class="input-box" id="mobile-sub">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  id="newsEmail"
+                  name="newsEmail"
+                  placeholder="Your email"
+                />
+                <input type="submit" value="Subscribe" id="newsSubmit" />
+              </div>
+            </form>
+            <p id="newsEmailError">
+              *Subscribe to our newsletter to receive cat related info.
+            </p>
+          </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer>
+          <div class="footer-box">
+            <a class="mobile-footer" href="">Breeds</a>
+            <a class="mobile-footer" href="./careForCats.html">Care For Cats</a>
+            <a class="mobile-footer" href="">Your Favorite Cat</a>
+            <button id="showModal" class="mobile-footer">Contact us</button>
+          </div>
+        </footer>
+      </body>
+    </html>

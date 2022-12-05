@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro:wght@400;600;800&family=Secular+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #5a4d69;
+}
+
+/* For desktop: */
+.col-1 {
+    width: 20%;
+  }
+  .col-2 {
+    width: 40%;
+  }
+  .col-3 {
+    width: 60%;
+  }
+  .col-4 {
+    width: 80%;
+  }
+  .col-5 {
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 783px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.9;
+    background-color: white;
+    color: #5a4d69;
+    font-size: 18px;
+  }
+  
+  header {
+    min-width: min-content;
+  }
+  
+
+/* Navigation bar */
+/* Navigation bar */
+
+.nav-bar {
+    z-index: 100;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f6cbd9d8;
+    box-shadow: 0 1px 20px 1px #5a4d6959;
+  }
+  
+  .sticky {
+    background-color: white;
+    position: fixed;
+    top: 0;
+  }
+  
+  .title-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  #logo {
+    color: #5a4d69;
+    margin: 0 20px;
+  }
+  
+  #title {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    margin-right: 40px;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .links a {
+    line-height: 50px;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 16px;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+    transition: 0.4s;
+  }
+  
+  .title-logo a {
+    text-decoration: none;
+    color: #5a4d69;
+  }
+  
+  .links a:hover {
+    color: #5a4d69b1;
+  }
+  
+  #mobile-nav {
+    display: none;
+    color: #5a4d69;
+  }
+  
+  @media screen and (max-width: 783px) {
+    .links a {
+      display: none;
+    }
+  
+    #mobile-nav {
+      display: block;
+    }
+  
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: auto;
+      position: fixed;
+      top: 50px;
+      right: 0;
+      overflow: auto;
+      z-index: 100;
+      background-color: #f6cbd9ba;
+      transition: 0.5s;
+    }
+  
+    .sidebar a {
+      display: block;
+      color: #5a4d69;
+      padding: 16px;
+      text-decoration: none;
+      text-align: right;
+      font-size: 16px;
+      font-family: "Maven Pro", sans-serif;
+      font-weight: 600;
+      transition: 0.4s;
+    }
+  
+    .sidebar a:hover {
+      color: white;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    form .input-box {
+      min-width: 240px;
+    }
+  
+    .input-box input[type="submit"] {
+      width: auto;
+      font-size: 12px;
+    }
+  
+    .slogan h1 {
+      font-size: 55px;
+    }
+  
+    .slogan p {
+      font-size: 18px;
+    }
+  }
+
+/* Breeds Main Content */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery #breed_image{
+    height: 50%;
+    object-fit: cover;
+}
+
+#breed_image{
+    height: 300px;
+    width: 300px;
+}
+
+#search {
+    width: 300px;
+    font-size: 20pt;
+    margin: 20px 20px;
+    font-family: "Lato", sans-serif;
+}
+
+#description,
+#temperament {
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#description, #dog, #intelligence, #url, #affection, #stranger, #energy{
+    font-size: 12pt;
+    padding: 0px 10px 10px 10px;
+}
+
+#temperament {
+    font-size: 15pt;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#container {
+    border: solid 1px black;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+#container:hover {
+    height: max-content;
+    background-color: white;
+}
+
+#container:hover .hidden{
+    display: block;
+}
+
+#container:hover .show{
+    display: none;
+}
+
+/* Search bar & Subcription */
+
+.search-top {
+    position: relative;
+    z-index: 50;
+  }
+  
+  .input-box {
+    width: 45%;
+    min-width: 435px;
+    background-color: white;
+    border-radius: 50rem;
+    border: solid 2px #f6cbd9;
+    /* padding: 5px; */
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .input-box i {
+    margin: 0 15px;
+    background-color: transparent;
+    border: none;
+    color: #f6cbd9;
+    transform: translateY(12px);
+  }
+  
+  input[type="email"],
+  input[type="text"] {
+    width: 80%;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: #5a4d69;
+    font-size: 18px;
+    font-family: "Secular One", sans-serif;
+  }
+  
+  ::placeholder {
+    color: #5a4d69;
+    opacity: 0.5;
+  }
+  
+  input[type="submit"] {
+    width: 100px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50rem;
+    background-color: #5a4d69;
+    padding: 10px;
+    color: white;
+    align-self: center;
+    font-family: "Secular One", sans-serif;
+    transition: 0.4s;
+  }
+  
+  input[type="submit"]:hover {
+    color: white;
+    background: #f6cbd9;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 783px) {
+    form .input-box {
+      width: 80%;
+      min-width: 300px;
+      padding: 0;
+    }
+  
+    .input-box input[type="email"],
+    .input-box input[type="text"] {
+      font-size: 12px;
+    }
+  
+    .input-box input[type="submit"] {
+      width: 20%;
+      font-size: 12px;
+    }
+  }
+
+/* contact box */
+
+.contact-box {
+    width: 600px;
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    /* to center the box */
+    margin-left: -270px;
+    margin-bottom: -232.5px;
+    background-color: #5a4d69e7;
+    color: #f6cbd9;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 0 #5a4d69a8;
+    z-index: 100;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 40px;
+    color: #f6cbd9;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e9e3e672;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #showModal {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #f6cbd9;
+    font-size: 16px;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+  }
+  
+  .contact-form {
+    width: 100%;
+    padding: 12px;
+    resize: vertical;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 3fr 0.5fr;
+  }
+  
+  .contact-form input:invalid:required {
+    background-image: linear-gradient(300deg, #5a4d69, #f6cbd9);
+  }
+  
+  .contact-box h2 {
+    font-family: "Secular One", sans-serif;
+    padding: 20px 0;
+  }
+  
+  .contact-box input[type="text"],
+  .contact-box input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    color: #5a4d69;
+  }
+  
+  #message {
+    padding: 10px;
+    font-family: "Secular One", sans-serif;
+  }
+  
+  #send {
+    background-color: #f6cbd9;
+  }
+  
+  #send:hover {
+    background-color: #5a4d69;
+    color: #f6cbd9;
+  }
+  
+  @media screen and (max-width: 783px) {
+    .footer-box #showModal {
+      font-size: 12px;
+    }
+  
+    section .contact-box {
+      width: 80%;
+      bottom: 15%;
+      left: 10%;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  
+    .contact-box .close-modal {
+      font-size: 35px;
+    }
+  
+    .contact-box h2 {
+      font-size: 20px;
+    }
+  }
+  
+  /* subscription */
+  
+  .subscription {
+    padding-top: 50px;
+    background: #5a4d69;
+    border-top-left-radius: 1.875rem;
+    border-top-right-radius: 1.875rem;
+  }
+  
+  .s-title {
+    text-align: center;
+    font-family: "Secular One", sans-serif;
+    font-size: 30px;
+    color: #f6cbd9;
+  }
+  
+  .subscription p {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #f6cbd9;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 783px) {
+    section .subscription {
+      margin-top: 50px;
+    }
+  
+    #mobile-sub {
+      width: auto;
+      margin: 0 3%;
+    }
+  
+    .subscription .s-title {
+      font-size: 25px;
+    }
+  }
+  /* Footer */
+  
+  footer {
+    background-color: #5a4d69;
+  }
+  
+  .footer-box {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 40px;
+  }
+  
+  .footer-box a {
+    text-decoration: none;
+    color: #f6cbd9;
+    font-size: 16px;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 783px) {
+    footer .footer-box {
+      justify-content: space-around;
+      flex-direction: column;
+      margin: 0 12px;
+      padding-top: 15px;
+      align-items: flex-end;
+      padding-bottom: 15px;
+    }
+  
+    .footer-box .mobile-footer {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  }
