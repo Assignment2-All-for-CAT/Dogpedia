@@ -1,3 +1,24 @@
+# update 12.06:
+add code in index.js to save the data from the search bar
+
+```//save the data from the search bar
+    document.querySelector('#searchButton').addEventListener('click', function(e){
+      e.preventDefault(); 
+      let valid = true;
+      catName = document.querySelector('#catname');
+      if(catName.value === ""){
+        valid = false;
+      }
+      if(valid){
+        const sForm = document.querySelector('#searchForm');
+        const sFd = new FormData(sForm);
+        const sObj = Object.fromEntries(sFd);
+        localStorage.setItem('sForm', JSON.stringify(sObj));
+        window.location.href = './breeds.html';
+      }
+    })
+```
+
 # upadate 12.02:
 add feedback for contact, please add name attribute to the input(e.g.name="userName") so that we can get the form data.
 
