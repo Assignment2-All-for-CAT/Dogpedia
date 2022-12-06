@@ -1,3 +1,8 @@
+# Problems:
+1. add page links to nav bars and footer
+
+
+
 # update 12.06:
 add code in index.js to save the data from the search bar
 
