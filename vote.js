@@ -1,8 +1,3 @@
-// Set a cross-site cookie for third-party contexts
-// document.cookie = `cookie2=value2; SameSite=None; Secure`;
-// Set a same-site cookie for first-party contexts
-// document.cookie = 'cookie1=value1; SameSite=Lax';
-
 const API_URL = `https://api.thecatapi.com/v1/`;
 const API_KEY = "live_OLQLaHy30gq7VRz7RPt8nO6l06F7quDfOMqfPV9UP4PnTPm3JPfvktXnhPTX4tuY";
 
