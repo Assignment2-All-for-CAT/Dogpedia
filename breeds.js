@@ -2,7 +2,7 @@ $(document).ready(function(){
     const url = `https://api.thecatapi.com/v1/breeds`;
     const api_key = "DEMO_API_KEY"
 
-    let storedBreeds = []
+    var storedBreeds = []
 
     fetch(url,{headers: {
        'x-api-key': api_key
@@ -17,14 +17,40 @@ $(document).ready(function(){
        //filter to only include those with an `image` object
        data = data.filter(img=> img.image?.url!=null)
     
-      storedBreeds = data; /* receive all the cats data */
+       storedBreeds = data; /* receive all the cats data */
     
-      displayElements(storedBreeds); //call the function to create the gallery
-
     })
     .catch(function(error) {
        console.log(error);
     });
+
+    const json = localStorage.getItem('sForm');
+    const obj = JSON.parse(json);
+
+    if(obj.catname != ''){
+        sValue(storedBreeds); //call the function to create the gallery
+        obj.catname = '';
+    }else{
+        displayElements(storedBreeds); //call the function to create the gallery
+    }    
+
+    function sValue(datas){
+        console.log("executei funcao svalue")
+        const principal = $("#gallery");
+        $(principal).html('');
+
+        console.log(datas)
+
+        let filteredBreeds = [];
+        console.log(datas.length)
+        for (let j = 0; j < datas.length; j++){
+            if (datas[j].name.toLowerCase().includes(obj.catname)){
+              filteredBreeds.push(j); //save the data accordingly with the search
+            }
+        }
+
+        displaySearch(filteredBreeds); //call the function to display only the data related to the input
+    }
 
     /* take the input and looking for some match in the data */
     function search(){
@@ -170,7 +196,7 @@ $(document).ready(function(){
         //append the container div to principal div
         $(principal).append(div);
      }
-    } 
-
+    }
+    
     $('#search').on('keyup', search)
 })
