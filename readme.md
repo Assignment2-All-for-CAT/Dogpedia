@@ -7,7 +7,7 @@
 
 ### VOTE PAGE
 
-1. set body element vh = 1 to make footer attached to bottom
+1. set body element vh = 100 to make footer attached to bottom
 2. Responsive design for cat picture and font size
 3. add hover or cursor:pointer to button to show that it is clicked
 
