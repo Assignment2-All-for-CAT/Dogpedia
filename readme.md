@@ -3,7 +3,7 @@
 
 
 
-# update 12.06:
+# update 12.07:
 add code in index.js to save the data from the search bar
 
 ```//save the data from the search bar
@@ -18,7 +18,7 @@ add code in index.js to save the data from the search bar
         const sForm = document.querySelector('#searchForm');
         const sFd = new FormData(sForm);
         const sObj = Object.fromEntries(sFd);
-        localStorage.setItem('sForm', JSON.stringify(sObj));
+        sessionStorage.setItem('sForm', JSON.stringify(sObj));
         window.location.href = './breeds.html';
       }
     })
