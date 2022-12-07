@@ -1,5 +1,24 @@
-# Problems:
+### **Carpedia Modifications**
+
+### For everyone
+
 1. add page links to nav bars and footer
+2.
+
+### VOTE PAGE
+
+1. set body element vh = 1 to make footer attached to bottom
+2. Responsive design for cat picture and font size
+3. add hover or cursor:pointer to button to show that it is clicked
+
+### BREEDS
+
+1.CSS Design
+
+### INDEX
+
+1. search bar jump to breeds
+
 
 
 
