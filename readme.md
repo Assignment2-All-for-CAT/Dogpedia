@@ -13,16 +13,13 @@
 
 ### BREEDS
 
-1.CSS Design
+1.CSS Design (done 12.07)
 
 ### INDEX
 
-1. search bar jump to breeds
+1. search bar jump to breeds (done 12.07)
 
-
-
-
-# update 12.07:
+# update 12.05:
 add code in index.js to save the data from the search bar
 
 ```//save the data from the search bar
