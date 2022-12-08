@@ -12,38 +12,43 @@
        crossorigin="anonymous"
      ></script>
      <script src="./jquery-3.6.1.min.js"></script>
+     <!-- <script src="searchfromindex.js" defer></script> -->
      <script src="breeds.js" defer></script>
-    <title>Breeds - Catpedia</title>
+     <!-- <script src="breedsbackup.js" defer></script> -->
+     <title>Breeds - Catpedia</title>
 </head>
 <body>
-    <!-- Header & Navigation Bar -->
-    <header>
-      <div class="nav--container">
-        <nav class="nav-bar col-5">
-          <div class="title-logo col-1">
-            <a href="index.html">
-              <i id="logo" class="fa-solid fa-paw fa-2xl"></i
-            ></a>
-            <a href="index.html"> <h2 id="title">Catpedia</h2></a>
-          </div>
-          <div class="col-4 links" id="navLinks">
-            <a href="">Breeds</a>
-            <a href="careForCats.html">Care For Cats</a>
-            <a href="">Your favorite cat</a>
-            <a href="javascript:void(0);" id="mobile-nav"
-              ><i class="fa-solid fa-bars fa-2xl"></i
-            ></a>
-          </div>
-        </nav>
+<header>
+  <!-- Header & Navigation Bar -->
+  <div class="nav--container">
+    <nav class="nav-bar col-5">
+      <div class="title-logo col-1">
+        <a href="index.html">
+          <i id="logo" class="fa-solid fa-paw fa-2xl"></i
+        ></a>
+        <a href="index.html"> <h2 id="title">Catpedia</h2></a>
       </div>
-      <div class="sidebar hidden" id="sidebar">
+      <div class="col-4 links" id="navLinks">
         <a href="">Breeds</a>
-        <a href="./careForCats.html">Care For Cats</a>
+        <a href="careForCats.html">Care For Cats</a>
         <a href="">Your favorite cat</a>
+        <a href="javascript:void(0);" id="mobile-nav"
+          ><i class="fa-solid fa-bars fa-2xl"></i
+        ></a>
       </div>
-
+    </nav>
+  </div>
+  <div class="sidebar hidden" id="sidebar">
+    <a href="">Breeds</a>
+    <a href="./careForCats.html">Care For Cats</a>
+    <a href="">Your favorite cat</a>
+  </div>
+</header>
+<section id="principal-body">
+    
     <!-- HTML Breeds Page -->
     <!-- <input type="text" id="search"> --> 
+
     <!-- Search Bar: users can search the breed of cats-->
     <section>
       <form>
@@ -53,9 +58,8 @@
             type="text"
             name="catname"
             id="search"
-            placeholder="Search the cat you'd like to know"
+            placeholder="Enter the name"
           />
-          <input type="text" value="Search" />
         </div>
       </form>
     </section>
@@ -101,36 +105,15 @@
             </form>
           </div>
         </section>
-        <!-- Subscription -->
-        <section>
-          <div class="subscription">
-            <h2 class="s-title">Subscribe to our newsletter</h2>
-            <form id="newsForm" action="#" method="get">
-              <div class="input-box" id="mobile-sub">
-                <i class="fa-regular fa-envelope"></i>
-                <input
-                  type="email"
-                  id="newsEmail"
-                  name="newsEmail"
-                  placeholder="Your email"
-                />
-                <input type="submit" value="Subscribe" id="newsSubmit" />
-              </div>
-            </form>
-            <p id="newsEmailError">
-              *Subscribe to our newsletter to receive cat related info.
-            </p>
-          </div>
-        </section>
-    
-        <!-- Footer -->
-        <footer>
-          <div class="footer-box">
-            <a class="mobile-footer" href="">Breeds</a>
-            <a class="mobile-footer" href="./careForCats.html">Care For Cats</a>
-            <a class="mobile-footer" href="">Your Favorite Cat</a>
-            <button id="showModal" class="mobile-footer">Contact us</button>
-          </div>
-        </footer>
-      </body>
+      </section>
+       <!-- Footer -->
+       <footer>
+        <div class="footer-box">
+          <a class="mobile-footer" href="">Breeds</a>
+          <a class="mobile-footer" href="./careForCats.html">Care For Cats</a>
+          <a class="mobile-footer" href="">Your Favorite Cat</a>
+          <button id="showModal" class="mobile-footer">Contact us</button>
+        </div>
+      </footer>
+    </body>
     </html>

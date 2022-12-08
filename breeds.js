@@ -1,6 +1,7 @@
 $(document).ready(function(){
     const url = `https://api.thecatapi.com/v1/breeds`;
     const api_key = "DEMO_API_KEY"
+    
 
     var storedBreeds = []
 
@@ -16,35 +17,41 @@ $(document).ready(function(){
     
        //filter to only include those with an `image` object
        data = data.filter(img=> img.image?.url!=null)
-    
+       
        storedBreeds = data; /* receive all the cats data */
-    
+
+       const json = sessionStorage.getItem('sForm');
+       var obj = JSON.parse(json);
+
+       if(obj === null)
+          obj = {'catname': ''};
+       else{
+          var aux = obj.catname;
+       }
+
+
+        if(obj.catname != ''){
+            sValue(storedBreeds, aux); //call the function to create the gallery
+        }else{
+            displayElements(storedBreeds); //call the function to create the gallery
+        }
+           
     })
     .catch(function(error) {
        console.log(error);
     });
 
-    const json = localStorage.getItem('sForm');
-    const obj = JSON.parse(json);
-
-    if(obj.catname != ''){
-        sValue(storedBreeds); //call the function to create the gallery
-        obj.catname = '';
-    }else{
-        displayElements(storedBreeds); //call the function to create the gallery
-    }    
-
-    function sValue(datas){
-        console.log("executei funcao svalue")
+    
+    
+        
+    function sValue(datas, value){
         const principal = $("#gallery");
         $(principal).html('');
 
-        console.log(datas)
-
         let filteredBreeds = [];
-        console.log(datas.length)
+
         for (let j = 0; j < datas.length; j++){
-            if (datas[j].name.toLowerCase().includes(obj.catname)){
+            if (datas[j].name.toLowerCase().includes(value)){
               filteredBreeds.push(j); //save the data accordingly with the search
             }
         }
