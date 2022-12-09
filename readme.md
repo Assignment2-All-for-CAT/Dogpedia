@@ -2,7 +2,8 @@
 
 Altered in CSS for breeds page this id
 
-``` #principal-body {
+``` 
+    #principal-body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +12,8 @@ Altered in CSS for breeds page this id
     background-size: 8%;
     background-attachment: fixed;
     min-height: 750px;
-}```
+}
+```
 
 ### **Carpedia Modifications**
 
