@@ -1,30 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Maven+Pro:wght@400;600;800&family=Secular+One&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #5a4d69;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #5a4d69;
 }
 
 /* For desktop: */
 .col-1 {
   width: 20%;
 }
+
 .col-2 {
   width: 40%;
 }
+
 .col-3 {
   width: 60%;
 }
+
 .col-4 {
   width: 80%;
 }
+
 .col-5 {
   width: 100%;
 }
 
 @media screen and (min-width: 783px) {
+
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -173,18 +178,24 @@ header {
 
 /* Breeds Main Content */
 
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("Images/catpaw.png");
+  background-repeat: space;
+  background-size: 8%;
+  background-attachment: fixed;
+}
+
 #principal-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("catpaw.png");
-    background-repeat: space;
-    background-size: 8%;
-    background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 532px;
 }
 
 /* Search bar & Subcription */
+form {
+  margin: 7%;
+}
 
 .input-box {
   margin: auto;
@@ -236,109 +247,124 @@ input[type="text"] {
   }
 }
 
-#gallery #breed_image{
-    height: 50%;
-    object-fit: cover;
+#gallery #breed_image {
+  height: 50%;
+  object-fit: cover;
 }
 
-#breed_image{
-    height: 200px;
-    width: 270px;
+#breed_image {
+  height: 200px;
+  width: 270px;
 }
 
-#breed_name{
+#breed_name {
   font-size: 16pt;
 }
 
-#temperament{
-    font-size: 12pt;
-    text-align: center;
-    margin-top: 10px;
+#temperament {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 10px;
 }
 
-#dog, #intelligence, #url, #affection, #stranger, #energy{
-    font-size: 10pt;
-    padding: 0px 10px 10px 10px;
+#dog,
+#intelligence,
+#url,
+#affection,
+#stranger,
+#energy {
+  font-size: 10pt;
+  padding: 0px 10px 10px 10px;
 }
-#description{
+
+#description {
   font-size: 10pt;
   padding: 10px 10px 10px 10px;
 }
 
 #gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: inline-block;
+  text-align: center;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 #container {
-    border: solid thick #5a4d69;
+  border: solid thick #f6cbd9d8;
+  height: 300px;
+  width: 270px;
+  display: inline-block;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2vh 4vw 1vh 4vw;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#container:hover {
+  height: max-content;
+  background-color: white;
+}
+
+#container:hover .hidden {
+  display: block;
+}
+
+#container:hover .show {
+  display: none;
+}
+
+@media screen and (max-width: 783px) {
+
+  #breed_image {
+    height: 250px;
+    width: 250px;
+  }
+
+  #temperament {
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #description,
+  #dog,
+  #intelligence,
+  #url,
+  #affection,
+  #stranger,
+  #energy {
+    font-size: 10pt;
+    /* padding: 0px 10px 10px 10px; */
+  }
+
+  #breed_name {
+    font-size: 16pt;
+  }
+
+  #gallery {
+    display: inline-block;
+    text-align: center;
+    /* grid-template-columns: 1fr 1fr; */
+    /* margin-right: 10%; */
+  }
+
+  #container {
+    border: solid thick #f6cbd9d8;
     height: 300px;
-    width: 270px;
-    display: flex;
-    flex-direction: column;
+    width: 250px;
+    display: inline-block;
+    /* flex-direction: column; */
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px;
-}
-
-.hidden{
-    display: none;
-}
-
-#container:hover {
-    height: max-content;
-    background-color: white;
-}
-
-#container:hover .hidden{
-    display: block;
-}
-
-#container:hover .show{
-    display: none;
-}
-
-@media screen and (max-width: 783px) {
-  
-  #breed_image{
-      height: 250px;
-      width: 250px;
-  }
-
-  #temperament {
-      font-size: 10pt;
-      text-align: center;
-      margin-top: 10px;
-  }
-
-  #description, #dog, #intelligence, #url, #affection, #stranger, #energy{
-      font-size: 10pt;
-      /* padding: 0px 10px 10px 10px; */
-  }
-
-  #breed_name {
-      font-size: 16pt;
-  }
-
-  #gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin-right: 10%;
-  }
-
-  #container {
-      border: solid thick #5a4d69;
-      height: 300px;
-      width: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      border-radius: 10px;
-      overflow: hidden;
-      /* margin: 20px; */
+    /* margin: 20px; */
   }
 }
 
@@ -407,6 +433,10 @@ input[type="text"] {
   grid-template-rows: 1fr 1fr 3fr 0.5fr;
 }
 
+.contact-form label {
+  color: #f6cbd9;
+}
+
 .contact-form input:invalid:required {
   background-image: linear-gradient(300deg, #5a4d69, #f6cbd9);
 }
@@ -414,6 +444,7 @@ input[type="text"] {
 .contact-box h2 {
   font-family: "Secular One", sans-serif;
   padding: 20px 0;
+  color: #f6cbd9;
 }
 
 .contact-box input[type="text"],
@@ -421,6 +452,7 @@ input[type="text"] {
   width: 100%;
   padding: 5px;
   color: #5a4d69;
+  border: none;
 }
 
 #message {
@@ -435,6 +467,19 @@ input[type="text"] {
 #send:hover {
   background-color: #5a4d69;
   color: #f6cbd9;
+}
+
+input[type="submit"] {
+  width: 100px;
+  font-size: 14px;
+  border: none;
+  border-radius: 50rem;
+  background-color: #5a4d69;
+  padding: 10px;
+  color: white;
+  align-self: center;
+  font-family: "Secular One", sans-serif;
+  transition: 0.4s;
 }
 
 @media screen and (max-width: 783px) {
@@ -460,7 +505,6 @@ input[type="text"] {
 }
 
 /* Footer */
-
 footer {
   background-color: #5a4d69;
 }

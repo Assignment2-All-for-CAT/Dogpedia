@@ -1,20 +1,3 @@
-# update 12.08
-
-Altered in CSS for breeds page this id
-
-``` 
-    #principal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("catpaw.png");
-    background-repeat: space;
-    background-size: 8%;
-    background-attachment: fixed;
-    min-height: 750px;
-}
-```
-
 ### **Carpedia Modifications**
 
 ### For everyone

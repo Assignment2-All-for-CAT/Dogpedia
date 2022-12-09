@@ -53,13 +53,17 @@ header {
 .nav-bar {
   z-index: 100;
   overflow: hidden;
-  height: 8vh;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6cbd9d8;
   box-shadow: 0 1px 20px 1px #5a4d6959;
+}
+
+.nav-bar a {
+  text-decoration: none;
 }
 
 .title-logo {
@@ -148,11 +152,11 @@ header {
 /* main part */
 main {
   /* height: 100vh; */
-  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("images-vote/catpaw.png");
+  background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("Images/catpaw.png");
   background-repeat: space;
   background-size: 8%;
   background-attachment: fixed;
-  min-height: 82vh;
+  min-height: 85.5vh;
 }
 
 #inner-container {
@@ -164,15 +168,9 @@ main {
   width: 33vw;
 }
 
-/* .col-lg2 img {
-  display: block;
-  position: absolute;
-  object-fit: cover;
-} */
-
 #vote-options button,
 #vote-results button {
-  /* font-size: 1.1vw; */
+  margin-top: 2%;
   border: none;
   border-radius: 50rem;
   background-color: #5a4d69;
@@ -265,7 +263,7 @@ main {
 
 footer {
   background-color: #5a4d69;
-  min-height: 10vh;
+  min-height: 7.5vh;
   /* height: calc(100% - 550px); */
 }
 
@@ -286,6 +284,7 @@ footer {
 }
 
 /* contact box */
+
 .contact-box {
   width: 600px;
   position: fixed;
@@ -363,13 +362,7 @@ footer {
   width: 100%;
   padding: 5px;
   color: #5a4d69;
-  width: 80%;
-  background-color: white;
   border: none;
-  outline: none;
-  color: #5a4d69;
-  font-size: 18px;
-  font-family: "Secular One", sans-serif;
 }
 
 #message {
@@ -379,6 +372,11 @@ footer {
 
 #send {
   background-color: #f6cbd9;
+}
+
+#send:hover {
+  background-color: #5a4d69;
+  color: #f6cbd9;
 }
 
 input[type="submit"] {
@@ -392,11 +390,6 @@ input[type="submit"] {
   align-self: center;
   font-family: "Secular One", sans-serif;
   transition: 0.4s;
-}
-
-#send:hover {
-  background-color: #5a4d69;
-  color: #f6cbd9;
 }
 
 @media screen and (max-width: 783px) {
@@ -432,11 +425,11 @@ input[type="submit"] {
   }
 
   main {
-    min-height: 68vh;
+    min-height: 73vh;
   }
 
   footer {
-    min-height: 22vh;
+    min-height: 20vh;
   }
 
   #vote-options {
