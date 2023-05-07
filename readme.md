@@ -3,7 +3,6 @@
 ### For everyone
 
 1. add page links to nav bars and footer
-2.
 
 ### VOTE PAGE
 
