@@ -1,187 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- media framework -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/4ed69a31c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./index.js" defer></script>
+    <script src="./searchfromindex.js" defer></script>
+    <title>Dogpedia</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="index.css" />
-  <!-- media framework -->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <!-- icons -->
-  <script src="https://kit.fontawesome.com/4ed69a31c6.js" crossorigin="anonymous"></script>
-  <script src="./jquery-3.6.1.min.js"></script>
-  <script src="./index.js" defer></script>
-  <script src="./searchfromindex.js" defer></script>
-  <title>Catpedia</title>
-</head>
-
-<body>
-  <!-- Header & Navigation Bar -->
-  <header>
-    <div class="nav--container">
-      <nav class="nav-bar col-5">
-        <div class="title-logo col-1">
-          <a href="index.html">
-            <i id="logo" class="fa-solid fa-paw fa-2xl"></i></a>
-          <a href="index.html">
-            <h2 id="title">Catpedia</h2>
-          </a>
-        </div>
-        <div class="col-4 links" id="navLinks">
-          <a href="breeds.html">Breeds</a>
-          <a href="careForCats.html">Care For Cats</a>
-          <a href="vote.html">Your favorite cat</a>
-          <a href="javascript:void(0);" id="mobile-nav"><i class="fa-solid fa-bars fa-2xl"></i></a>
-        </div>
-      </nav>
-    </div>
-    <div class="sidebar hidden" id="sidebar">
-      <a href="breeds.html">Breeds</a>
-      <a href="./careForCats.html">Care For Cats</a>
-      <a href="vote.html">Your favorite cat</a>
-    </div>
-    <!-- Slideshow container -->
-    <div class="slides-container col-5">
-      <!-- Full-width images -->
-      <img src="./Images/landing-1.jpg" alt="cat1" class="slides fade col-5" />
-      <img src="./Images/landing-2.jpg" alt="cat2" class="slides fade col-5" />
-      <img src="./Images/landing-3.jpg" alt="cat3" class="slides fade col-5" />
-    </div>
-  </header>
-  <!-- Search Bar: users can search the breed of cats-->
-  <section>
-    <div class="slogan">
-      <h1>Catpedia</h1>
-      <p>Everything You Need to Know About Cats</p>
-    </div>
-    <form id="searchForm">
-      <div class="input-box search-top">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="catname" name="catname" placeholder="Search the cat you'd like to know" />
-        <input type="submit" id="searchButton" />
-      </div>
-    </form>
-  </section>
-  <!-- Care for Cats -->
-  <section>
-    <div class="care">
-      <img src="./Images/take-care-of-cats.jpg" alt="take care of cats" id="careImg" />
-      <div class="care-content">
-        <h2 class="part-title">Care For Cats</h2>
-        <p>Don't know how to take care of your adorable cat?</p>
-        <p>Here are some tips for you:</p>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-shield-cat fa-2xl"></i>
-            <a href="./careForCats.html#ownerContent">
-              <h4>Cat Owner’s Responsibilities</h4>
+  <body>
+    <!-- Header & Navigation Bar -->
+    <header>
+      <div class="nav--container">
+        <nav class="nav-bar col-5">
+          <div class="title-logo col-1">
+            <a href="index.html">
+              <i id="logo" class="fa-solid fa-paw fa-2xl"></i
+            ></a>
+            <a href="index.html">
+              <h2 id="title">Dogpedia</h2>
             </a>
           </div>
-          <p>
-            Cats are a delightful addition to a home and family. They are now
-            the #1 pet in North America. Click and follow these tips and you
-            and your pet will enjoy a lifetime of love and companionship
-            together.
-          </p>
-        </div>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-cat fa-2xl"></i>
-            <a href="./careForCats.html#tipsIndoor">
-              <h4>Tips For A Happy & Healthy Indoor Kitty</h4>
-            </a>
+          <div class="col-4 links" id="navLinks">
+            <a href="breeds.html">Breeds</a>
+            <a href="careForCats.html">Care For Dogs</a>
+            <a href="vote.html">Your Favorite Dog</a>
+            <a href="javascript:void(0);" id="mobile-nav"
+              ><i class="fa-solid fa-bars fa-2xl"></i
+            ></a>
           </div>
-          <p>
-            Cats crave familiarity, structure and routine, which is exactly
-            what an indoor life has to offer, with the added bonus of safety
-            from all the dangers from outside! By ensuring your cat has the
-            necessary home environment, your cat can live a long and happy
-            life indoors.
-          </p>
-        </div>
-        <div class="care-container">
-          <div class="care-box">
-            <i class="fa-solid fa-tag fa-2xl"></i>
-            <a href="./careForCats.html#harnessContent">
-              <h4>Harness Training For Cats</h4>
-            </a>
-          </div>
-          <p>
-            Be very patient and persistent and reward your pet lovingly.
-            Yelling, hitting or rough treatment will only teach your cat to
-            fear you and will accomplish nothing.
-          </p>
-        </div>
+        </nav>
       </div>
-    </div>
-  </section>
-  <!-- Your favorite cat -->
-  <section>
-    <div class="pick">
-      <h2 class="pick-title">Pick Your Favorite Cat NOW!</h2>
-      <div class="pics-container">
-        <img src="./Images/cat-pic1.jpg" alt="cat-1" class="pick-img" />
-        <img src="./Images/cat-pic2.jpg" alt="cat-2" class="pick-img" />
-        <img src="./Images/cat-pic3.jpg" alt="cat-3" class="pick-img" />
-        <img src="./Images/cat-pic4.jpg" alt="cat-4" class="pick-img" />
-        <img src="./Images/cat-pic5.jpg" alt="cat-5" class="pick-img" />
-        <img src="./Images/cat-pic6.jpg" alt="cat-6" class="pick-img" />
-        <img src="./Images/cat-pic7.jpg" alt="cat-7" class="pick-img" />
-        <img src="./Images/cat-pic8.jpg" alt="cat-8" class="pick-img" />
-        <img src="./Images/cat-pic9.jpg" alt="cat-9" class="pick-img mobile-9" />
+      <div class="sidebar hidden" id="sidebar">
+        <a href="breeds.html">Breeds</a>
+        <a href="./careForCats.html">Care For Dogs</a>
+        <a href="vote.html">Your Favorite Dog</a>
       </div>
-      <a href='vote.html'><input type="button" value="Vote For Me" /></a>
-    </div>
-  </section>
-  <!-- pop up contact box -->
-  <section>
-    <div class="overlay hidden"></div>
-    <div class="contact-box modal hidden">
-      <button class="close-modal">&times</button>
-      <h2>Have other questions? Let us know!</h2>
-      <form id="contactForm" action="#" method="get">
-        <div class="contact-form">
-          <label for="userName" class="box-1">Name</label>
-          <input type="text" id="userName" class="box-4" name="userName" required />
-
-          <label for="userEmail" class="box-1">Email</label>
-          <input type="email" id="userEmail" class="box-4" name="userEmail" required />
-          <label for="question" class="box-1">Question</label>
-          <textarea placeholder="Please leave your message here." id="message" class="box-4" name="message"></textarea>
-        </div>
-        <p id="userEmailError"></p>
-        <br />
-        <input type="submit" value="Send" id="send" />
-      </form>
-    </div>
-  </section>
-  <!-- Subscription -->
-  <section>
-    <div class="subscription">
-      <h2 class="s-title">Subscribe to our newsletter</h2>
-      <form id="newsForm" action="#" method="get">
-        <div class="input-box" id="mobile-sub">
-          <i class="fa-regular fa-envelope"></i>
-          <input type="email" id="newsEmail" name="newsEmail" placeholder="Your email" />
-          <input type="submit" value="Subscribe" id="newsSubmit" />
+      <!-- Slideshow container -->
+      <div class="slides-container col-5">
+        <!-- Full-width images -->
+        <img
+          src="./Images/landing-1.jpg"
+          alt="cat1"
+          class="slides fade col-5"
+        />
+        <img
+          src="./Images/landing-2.jpg"
+          alt="cat2"
+          class="slides fade col-5"
+        />
+        <img
+          src="./Images/landing-3.jpg"
+          alt="cat3"
+          class="slides fade col-5"
+        />
+      </div>
+    </header>
+    <!-- Search Bar: users can search the breed of dogs-->
+    <section>
+      <div class="slogan">
+        <h1>Dogpedia</h1>
+        <p>Everything You Need to Know About Dogs</p>
+      </div>
+      <form id="searchForm">
+        <div class="input-box search-top">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            id="catname"
+            name="catname"
+            placeholder="Search the dog you'd like to know"
+          />
+          <input type="submit" id="searchButton" />
         </div>
       </form>
-      <p id="newsEmailError">
-        *Subscribe to our newsletter to receive cat related info.
-      </p>
-    </div>
-  </section>
+    </section>
+    <!-- Care for Cats -->
+    <section>
+      <div class="care">
+        <img
+          src="./Images/take-care-of-dogs.jpg"
+          alt="take care of dogs"
+          id="careImg"
+        />
+        <div class="care-content">
+          <h2 class="part-title">Care For Dogs</h2>
+          <p>Don't know how to take care of your adorable dog?</p>
+          <p>Here are some tips for you:</p>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-shield-cat fa-2xl"></i>
+              <a href="./careForCats.html#ownerContent">
+                <h4>Dog Owner’s Responsibilities</h4>
+              </a>
+            </div>
+            <p>
+              Proper pet care is the basis of responsible pet ownership. It is
+              important when you adopt a pet to understand it is a lifetime
+              commitment to a furry family member that depends on you for his or
+              her health and well-being.
+            </p>
+          </div>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-cat fa-2xl"></i>
+              <a href="./careForCats.html#tipsIndoor">
+                <h4>The Challenging Dog</h4>
+              </a>
+            </div>
+            <p>
+              Dogs can engage in a range of challenging behaviours — including
+              barking, chewing and escaping — but with a little training and
+              plenty of exercise, most difficult behaviours can improve.
+            </p>
+          </div>
+          <div class="care-container">
+            <div class="care-box">
+              <i class="fa-solid fa-tag fa-2xl"></i>
+              <a href="./careForCats.html#harnessContent">
+                <h4>Dog Training</h4>
+              </a>
+            </div>
+            <p>Spend your dog’s active time training her appropriately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Your favorite cat -->
+    <section>
+      <div class="pick">
+        <h2 class="pick-title">Pick Your Favorite Dog NOW!</h2>
+        <div class="pics-container">
+          <img src="./Images/cat-pic1.jpg" alt="cat-1" class="pick-img" />
+          <img src="./Images/cat-pic2.jpg" alt="cat-2" class="pick-img" />
+          <img src="./Images/cat-pic3.jpg" alt="cat-3" class="pick-img" />
+          <img src="./Images/cat-pic4.jpg" alt="cat-4" class="pick-img" />
+          <img src="./Images/cat-pic5.jpg" alt="cat-5" class="pick-img" />
+          <img src="./Images/cat-pic6.jpg" alt="cat-6" class="pick-img" />
+          <img src="./Images/cat-pic7.jpg" alt="cat-7" class="pick-img" />
+          <img src="./Images/cat-pic8.jpg" alt="cat-8" class="pick-img" />
+          <img
+            src="./Images/cat-pic9.jpg"
+            alt="cat-9"
+            class="pick-img mobile-9"
+          />
+        </div>
+        <a href="vote.html"><input type="button" value="Vote For Me" /></a>
+      </div>
+    </section>
+    <!-- pop up contact box -->
+    <section>
+      <div class="overlay hidden"></div>
+      <div class="contact-box modal hidden">
+        <button class="close-modal">&times</button>
+        <h2>Have other questions? Let us know!</h2>
+        <form id="contactForm" action="#" method="get">
+          <div class="contact-form">
+            <label for="userName" class="box-1">Name</label>
+            <input
+              type="text"
+              id="userName"
+              class="box-4"
+              name="userName"
+              required
+            />
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-box">
-      <a class="mobile-footer" href="breeds.html">Breeds</a>
-      <a class="mobile-footer" href="./careForCats.html">Care For Cats</a>
-      <a class="mobile-footer" href="vote.html">Your Favorite Cat</a>
-      <button id="showModal" class="mobile-footer">Contact us</button>
-    </div>
-  </footer>
-</body>
+            <label for="userEmail" class="box-1">Email</label>
+            <input
+              type="email"
+              id="userEmail"
+              class="box-4"
+              name="userEmail"
+              required
+            />
+            <label for="question" class="box-1">Question</label>
+            <textarea
+              placeholder="Please leave your message here."
+              id="message"
+              class="box-4"
+              name="message"
+            ></textarea>
+          </div>
+          <p id="userEmailError"></p>
+          <br />
+          <input type="submit" value="Send" id="send" />
+        </form>
+      </div>
+    </section>
+    <!-- Subscription -->
+    <section>
+      <div class="subscription">
+        <h2 class="s-title">Subscribe to our newsletter</h2>
+        <form id="newsForm" action="#" method="get">
+          <div class="input-box" id="mobile-sub">
+            <i class="fa-regular fa-envelope"></i>
+            <input
+              type="email"
+              id="newsEmail"
+              name="newsEmail"
+              placeholder="Your email"
+            />
+            <input type="submit" value="Subscribe" id="newsSubmit" />
+          </div>
+        </form>
+        <p id="newsEmailError">
+          *Subscribe to our newsletter to receive dog-related info.
+        </p>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+      <div class="footer-box">
+        <a class="mobile-footer" href="breeds.html">Breeds</a>
+        <a class="mobile-footer" href="./careForCats.html">Care For Dogs</a>
+        <a class="mobile-footer" href="vote.html">Your Favorite Dog</a>
+        <button id="showModal" class="mobile-footer">Contact us</button>
+      </div>
+    </footer>
+  </body>
 </html>

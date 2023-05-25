@@ -203,13 +203,13 @@ h1 {
   }
 
   #img1 {
-    content: url("./Images/catmobile1.jpg");
+    content: url("./Images/cat-mobile1.jpg");
   }
   #img2 {
-    content: url("./Images/catmobile2.jpg");
+    content: url("./Images/cat-mobile2.jpg");
   }
   #img3 {
-    content: url("./Images/catmobile3.jpg");
+    content: url("./Images/cat-mobile3.jpg");
   }
 
   .resBox img,
@@ -225,7 +225,7 @@ h2 {
   font-weight: 400;
   margin: 10px 0;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .careContent {
