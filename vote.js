@@ -1,6 +1,6 @@
 const API_URL = `https://api.thedogapi.com/v1/`;
 const API_KEY =
-  "live_OLQLaHy30gq7VRz7RPt8nO6l06F7quDfOMqfPV9UP4PnTPm3JPfvktXnhPTX4tuY";
+  "live_q9plGmBl5hRYzv28iBnSK16KXWamr8JYrqua7fYGgPj93LJ3ZNV12kiy49jVv82X";
 
 let id = "";
 let currentImageToVoteOn;
